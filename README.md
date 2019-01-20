@@ -1,5 +1,8 @@
-# Counterstrike Source dedicated server
+# Insurgency dedicated server
 This image provides an Insurgency dedicated server for cooperative play.
+
+## Work in progress!
+This image is work in progress currently. No guarantee it runs properly. But I'm working on it.
 
 ## Usage
 To start the container run `docker run -d --init --name insurgency-coop-dedicated --restart unless-stopped -v insurgency-coop-dedicated-config:/opt/steam/css/cstrike/cfg -p 27015:27015 -p 27015:27015/udp -p 1200:1200 -p 27005:27005/udp -p 27020:27020/udp -p 26901:26901/udp -e RCON_PASSWORD=mypassword -e INS_PASSWORD=mypassword -e INS_HOSTNAME=myservername nilsramsperger/insurgency-coop-dedicated`.
