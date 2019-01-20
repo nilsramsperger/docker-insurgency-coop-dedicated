@@ -13,7 +13,7 @@ RUN apt-get update \
     && useradd -ms /bin/bash steam \
     && chown -R steam:steam /opt/steam/css
 ADD ./files/cfg/ /opt/steam/insurgency/cfg
-# Add further files
+ADD ./files/scripts/ /opt/steam/insurgency/scripts
 ENV INS_HOSTNAME Insurgency Coop Dedicated Server
 ENV INS_PASSWORD ""
 ENV RCON_PASSWORD somepassword
