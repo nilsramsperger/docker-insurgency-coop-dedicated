@@ -20,7 +20,7 @@ install() {
 
 trap term_handler SIGTERM
 cd /opt/steam/insurgency
-[ "$(ls -A /)" ] && install
+[ ! -d "/opt/steam/insurgency/scripts" ] && install
 ./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +map "market hunt" +maxplayers 48 & wait ${!}
 echo "Insurgency dedicated died"
 shutdown
