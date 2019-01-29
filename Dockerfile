@@ -7,13 +7,11 @@ RUN apt-get update \
     && tar -C /opt/steam -xvzf /tmp/steamcmd_linux.tar.gz \
     && rm /tmp/steamcmd_linux.tar.gz \
     && mkdir -p /opt/steam/css \
-    && opt/steam/steamcmd.sh +login anonymous +force_install_dir /opt/steam/insurgency/ +app_update 237410 validate +quit \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip \
-    && useradd -ms /bin/bash steam \
-    && chown -R steam:steam /opt/steam/css
-ADD ./files/cfg/ /opt/steam/insurgency/cfg
-ADD ./files/scripts/ /opt/steam/insurgency/scripts
+    && useradd -ms /bin/bash steam
+ADD ./files/cfg/ /opt/steam/temp/cfg
+ADD ./files/scripts/ /opt/steam/temp/scripts
 ENV INS_HOSTNAME Insurgency Coop Dedicated Server
 ENV INS_PASSWORD ""
 ENV RCON_PASSWORD somepassword
