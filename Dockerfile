@@ -21,5 +21,4 @@ EXPOSE 27005/udp
 EXPOSE 27020/udp
 EXPOSE 26901/udp
 VOLUME ["/opt/steam/insurgency/cfg"]
-USER steam
 CMD ["/supervisor.sh"]
