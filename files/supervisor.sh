@@ -17,7 +17,7 @@ install() {
     mkdir /opt/steam/insurgency/scripts
     cp -a /tmp/cfg/. /opt/steam/insurgency/cfg/
     cp -a /tmp/scripts/. /opt/steam/insurgency/scripts/
-    rm /tmp/
+    rm -r /tmp/
     chown -R steam:steam /opt/steam/insurgency
     echo "Installation done"
 }
