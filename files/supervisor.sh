@@ -28,6 +28,6 @@ echo "Starting Insurgency Dedicated Server"
 cd /opt/steam/insurgency
 su steam
 export LD_LIBRARY_PATH=/opt/steam/insurgency:/opt/steam/insurgency/bin:{$LD_LIBRARY_PATH}
-./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +hostname ${INS_HOSTNAME} +sv_password ${INS_PASSWORD} +rcon_password ${RCON_PASSWORD} +map "market hunt" +maxplayers 48 & wait ${!}
+./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +map "market hunt" +maxplayers 48 & wait ${!}
 echo "Insurgency Dedicated Server died"
 shutdown

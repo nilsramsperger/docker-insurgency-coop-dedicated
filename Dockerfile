@@ -11,9 +11,6 @@ RUN apt-get update \
     && useradd -ms /bin/bash steam
 ADD ./files/cfg/ /tmp/cfg
 ADD ./files/scripts/ /tmp/scripts
-ENV INS_HOSTNAME Insurgency Coop Dedicated Server
-ENV INS_PASSWORD ""
-ENV RCON_PASSWORD somepassword
 EXPOSE 27015/udp
 EXPOSE 27015
 EXPOSE 1200
