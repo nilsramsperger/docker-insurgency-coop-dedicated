@@ -6,12 +6,11 @@ RUN apt-get update \
     && mkdir -p /opt/steam \
     && tar -C /opt/steam -xvzf /tmp/steamcmd_linux.tar.gz \
     && rm /tmp/steamcmd_linux.tar.gz \
-    && mkdir -p /opt/steam/css \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip \
     && useradd -ms /bin/bash steam
-ADD ./files/cfg/ /opt/steam/temp/cfg
-ADD ./files/scripts/ /opt/steam/temp/scripts
+ADD ./files/cfg/ /tmp/cfg
+ADD ./files/scripts/ /tmp/scripts
 ENV INS_HOSTNAME Insurgency Coop Dedicated Server
 ENV INS_PASSWORD ""
 ENV RCON_PASSWORD somepassword
