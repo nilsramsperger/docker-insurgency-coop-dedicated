@@ -1,9 +1,6 @@
 # Insurgency dedicated server
 This image provides an Insurgency dedicated server for cooperative play.
 
-## Work in progress!
-This image is work in progress currently. No guarantee it runs properly. But I'm working on it.
-
 ## Server properties
 * The server is setup for 48 players
 * The theaters for _hunt_ and _checkpoint_ are customized for up to 16 human players
