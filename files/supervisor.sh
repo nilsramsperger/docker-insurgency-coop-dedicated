@@ -14,10 +14,10 @@ term_handler() {
 install() {
     echo "Installing Insurgency Dedicated Server"
     /opt/steam/steamcmd.sh +login anonymous +force_install_dir /opt/steam/insurgency +app_update 237410 validate +quit
-    mkdir /opt/steam/insurgency/insurgency/scripts
     [ ! -f /opt/steam/insurgency/insurgency/cfg/persisted.cfg ] \
     && cp -a /tmp/cfg/. /opt/steam/insurgency/insurgency/cfg/ \
     && touch /opt/steam/insurgency/insurgency/cfg/persisted.cfg
+    mkdir /opt/steam/insurgency/insurgency/scripts
     cp -a /tmp/scripts/. /opt/steam/insurgency/insurgency/scripts/
     rm -r /tmp/
     chown -R steam:steam /opt/steam/insurgency
