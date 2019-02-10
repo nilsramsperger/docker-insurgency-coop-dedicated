@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 loadConfig() {
+    echo "Loading config"
     yes | cp -rfa /var/insurgency/cfg/. /opt/steam/insurgency/insurgency/cfg/
 }
 
 storeConfig() {
+    echo "Storing config"
     yes | cp -rfa /opt/steam/insurgency/insurgency/cfg/. /var/insurgency/cfg/
 }
 
@@ -32,7 +34,7 @@ install() {
 }
 
 trap term_handler SIGTERM
-[ ! -d "/opt/steam/insurgency" ] && install
+[ ! -d "/opt/steam/insurgency/insurgency/scripts" ] && install
 su steam
 loadConfig
 echo "Starting Insurgency Dedicated Server"
