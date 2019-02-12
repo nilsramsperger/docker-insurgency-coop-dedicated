@@ -9,8 +9,7 @@ RUN apt-get update \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip \
     && useradd -ms /bin/bash steam
-ADD ./files/cfg/ /tmp/cfg
-ADD ./files/scripts/ /tmp/scripts
+ADD ./files/ /tmp
 EXPOSE 27015/udp
 EXPOSE 27015
 EXPOSE 1200

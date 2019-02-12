@@ -3,7 +3,8 @@ This image provides an Insurgency dedicated server for cooperative play.
 
 ## Server properties
 * The server is setup for 48 players
-* The theaters for _hunt_ and _checkpoint_ are customized for up to 16 human players
+* Mapcycle is reduced to gamemodes: _hunt_, _checkpoint_ and _conquer_
+* The theaters for _hunt_, _checkpoint_ and _conquer_ are customized for up to 16 human players
 * The lobby size is set to 10
 
 ## System Requirements
