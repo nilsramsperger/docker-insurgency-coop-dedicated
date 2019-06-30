@@ -40,7 +40,7 @@ su steam
 loadConfig
 echo "Starting Insurgency Dedicated Server"
 cd /opt/steam/insurgency
-export LD_LIBRARY_PATH=/opt/steam/insurgency:/opt/steam/insurgency/bin:{$LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/opt/steam/insurgency:/opt/steam/insurgency/bin:${LD_LIBRARY_PATH}
 ./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +map "market hunt" +maxplayers 48 & wait ${!}
 echo "Insurgency Dedicated Server died"
 shutdown
