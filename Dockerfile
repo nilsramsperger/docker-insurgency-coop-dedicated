@@ -12,9 +12,5 @@ RUN apt-get update \
 ADD ./files/ /tmp
 EXPOSE 27015/udp
 EXPOSE 27015
-EXPOSE 1200
-EXPOSE 27005/udp
-EXPOSE 27020/udp
-EXPOSE 26901/udp
 VOLUME ["/var/insurgency/cfg"]
 CMD ["/supervisor.sh"]
