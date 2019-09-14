@@ -27,7 +27,7 @@ install() {
     /opt/steam/steamcmd.sh +login anonymous +force_install_dir /opt/steam/insurgency +app_update 237410 validate +quit
     cp -a /tmp/mapcycle_cooperative.txt /opt/steam/insurgency/insurgency/
     cp -a /tmp/cfg/. /opt/steam/insurgency/insurgency/cfg/
-    mkdir /opt/steam/insurgency/insurgency/scripts
+    mkdir -p /opt/steam/insurgency/insurgency/scripts
     cp -a /tmp/scripts/. /opt/steam/insurgency/insurgency/scripts/
     rm -r /tmp/
     chown -R steam:steam /opt/steam/insurgency
@@ -36,11 +36,10 @@ install() {
 
 trap term_handler SIGTERM
 [ ! -d "/opt/steam/insurgency/insurgency/scripts" ] && install
-su steam
 loadConfig
 echo "Starting Insurgency Dedicated Server"
 cd /opt/steam/insurgency
 export LD_LIBRARY_PATH=/opt/steam/insurgency:/opt/steam/insurgency/bin:${LD_LIBRARY_PATH}
-./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +map "market hunt" +maxplayers 48 & wait ${!}
+su steam -c "./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +map \"market hunt\" +maxplayers 48" & wait ${!}
 echo "Insurgency Dedicated Server died"
 shutdown
