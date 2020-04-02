@@ -34,8 +34,15 @@ install() {
     echo "Installation done"
 }
 
+update() {
+    echo "Updating Insurgency Dedicated Server"
+    /opt/steam/steamcmd.sh +login anonymous +app_update 237410 +quit
+    echo "Update done"
+}
+
+
 trap term_handler SIGTERM
-[ ! -d "/opt/steam/insurgency/insurgency/scripts" ] && install
+[ ! -d "/opt/steam/insurgency/insurgency/scripts" ] && install || update
 loadConfig
 echo "Starting Insurgency Dedicated Server"
 cd /opt/steam/insurgency
