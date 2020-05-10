@@ -7,7 +7,7 @@ RUN apt-get update \
     && tar -C /opt/steam -xvzf /tmp/steamcmd_linux.tar.gz \
     && rm /tmp/steamcmd_linux.tar.gz \
     && chmod +x /supervisor.sh \
-    && apt-get remove -y unzip \
+    && apt-get remove -y unzip wget \
     && useradd -ms /bin/bash steam
 ADD ./files/ /tmp
 EXPOSE 27015/udp
