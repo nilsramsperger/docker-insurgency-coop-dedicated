@@ -1,6 +1,10 @@
 # Insurgency dedicated server
 This image provides an Insurgency dedicated server for cooperative play.
 
+## DEPRECATED!
+This image is deprecated and will is not under development anymore.
+Feel free to fork and build your own.
+
 ## Server properties
 * The server is setup for 48 players
 * Mapcycle is reduced to gamemodes: _hunt_, _checkpoint_ and _conquer_
